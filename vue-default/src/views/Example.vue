@@ -1,10 +1,9 @@
 <template>
-<div>
-    <input type="text" v-model="valueModel"/>
-    <input type="number" v-model.number="valueModel2"/>
-    <textarea v-model="valueModel3"></textarea>
-    <div>{{valueModel3}}</div>
-</div>
+    <div>
+        <!-- <img v-bind:src="url" > -->
+        <input type="text" v-model="textValue">
+        <button type="button" v-bind:disabled="textValue==''">click</button>
+    </div>
 </template>
 <script>
 export default {
@@ -12,15 +11,14 @@ export default {
     components:{},
     data(){
         return{
-            valueModel:'South Korea',
-            valueModel2:12,
-            valueModel3:'안녕하세요~',
+            url:"http://localhost:8080/img/logo.82b9c7a5.png",
+            textValue: ''
         }
     },
     setup(){},
     created(){},
     mounted(){
-        console.log(this.valueModel2);
+        
     },
     unmounted(){},
     methods:{}
