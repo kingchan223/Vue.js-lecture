@@ -1,28 +1,29 @@
 <template>
     <div>
-        <!-- <img v-bind:src="url" > -->
-        <input type="text" v-model="textValue">
-        <button type="button" v-bind:disabled="textValue==''">click</button>
+        <input type="text" v-model="lastName">
+        <input type="text" v-model="firstName">
+        <h1>Hello, {{fullName}}</h1>
+        <h1>Hello, {{fullName}}</h1>
+        <h1>Hello, {{fullName}}</h1>
+        <h1>Hello, {{fullName}}</h1>
     </div>
 </template>
 <script>
 export default {
-    name: '',
-    components:{},
     data(){
         return{
-            url:"http://localhost:8080/img/logo.82b9c7a5.png",
-            textValue: ''
+            firstName : "cobain",
+            lastName : "kurt",
         }
     },
-    setup(){},
-    created(){},
-    mounted(){
-        
+    computed:{
+        fullName(){ // fullName안에 사용된 data가 바뀌는지를 항상 감시하고 있다.
+            return this.firstName + this.lastName;
+        }
     },
-    unmounted(){},
-    methods:{}
 }
 </script>
 <style scoped>
 </style>
+
+
