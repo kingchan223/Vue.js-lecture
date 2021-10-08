@@ -1,35 +1,48 @@
 <template>
     <div>
-        <input type="text" v-model.number="x1"/>+
-        <input type="text" v-model.number="x2"/>=
-        <input type="text" v-model="y"/>
-        <!-- <button type="button" @click="plus">cal</button> -->
+        <input type="text" v-model='name'/>
+        <input type="text" v-model.number='age'/>
+        <input type="text" v-model='job'/>
+        <button type="button" @click="saveUserinfo">SAVE</button>
     </div>
 </template>
 <script>
 export default {
     data(){
         return{
-            x1:0,
-            x2:0,
+            name:'',
+            age:0,
+            job:'',
         }
     },
-    // watch:{//data 필드에 정의된 값만 사용가능 // 계속 보고있기 때문에 많은 자원을 소모하기도 한다.
-    //     x1(){//x1의 변경사항을 계속보고 있다. 하여 x1이 변경되면 실행된다.
-    //         this.y = this.x1 + this.x2;
-    //     },
-    //     x2(){//x2의 변경사항을 계속보고 있다. 하여 x2이 변경되면 실행된다.
-    //         this.y = this.x1 + this.x2;
-    //     }
-    // }
-    computed: {
-        y(){
-            return this.x1 + this.x2;
+    methods: {
+        saveUserinfo(){
+            if(this.name == ''){
+                // return alert('이름을 입력하세요.')
+                return this.$swal('사용자 이름을 입력하세요.')
+            }
+            if(this.age == '' || this.age == 0){
+                return this.$swal('나이를 입력하세요.')
+            }
+
+            const userInfo = {
+                name: this.name,
+                age : this.age,
+                job: this.job
+            }
+            const r = this.saveData(userInfo);
+            if(r == 'S'){
+                alert("사용자 정보가 생성되었습니다.");
+            }
+            this.saveData(userInfo);
+        },
+        saveData(userInfo){//서버로 데이터를 보냈다고 가정.
+            console.log(userInfo);
+            const r = 'S';
+            return r;
         }
-    }
+    },
 }
 </script>
 <style scoped>
 </style>
-
-
