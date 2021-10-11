@@ -21,6 +21,7 @@ export default {
                 // return alert('이름을 입력하세요.')
                 return this.$swal('사용자 이름을 입력하세요.')
             }
+            
             if(this.age == '' || this.age == 0){
                 return this.$swal('나이를 입력하세요.')
             }
