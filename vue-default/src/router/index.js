@@ -83,6 +83,30 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ParentComponent.vue"),
   },
+  {
+    path: "/profile",
+    name: "MyPage",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/MyPage.vue"),
+  },
+  {
+    path: "/slot",
+    name: "SlotUseModalLayout",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/SlotUseModalLayout.vue"),
+  },
+  {
+    path: "/provideInject",
+    name: "ProvideInject",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/ProvideInject.vue"),
+  },
+  {
+    path: "/MixinTest",
+    name: "MixinTest",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/MixinTest.vue"),
+  },
 ];
 
 const router = createRouter({

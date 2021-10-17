@@ -1,6 +1,8 @@
 <template>
     <div>
-        <button type="button" @click="callChildFunc">parent's click</button>
+        <button type="button" @click="showData">
+            부모 버튼
+        </button>
         <ChildComponent ref="child_component"/>
     </div>
 </template>
@@ -8,10 +10,20 @@
 import ChildComponent from './ChildComponent';
 export default {
     name:'',
+    data(){
+        return{
+            parentMsg:'',
+        }
+    },
     components: {ChildComponent},
+    computed: {
+        msg(){
+            return this.$refs.child_component.msg;
+        }
+    },
     methods: {
-        callChildFunc(){
-            this.$refs.child_component.$refs.child_btn.click();
+        showData(){
+            alert(this.msg);
         }
     },
 }
