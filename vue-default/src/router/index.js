@@ -107,6 +107,36 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/MixinTest.vue"),
   },
+  {
+    path: "/calculator",
+    name: "calculator",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Calculator.vue"),
+  },
+  {
+    path: "/compositionapi",
+    name: "CompositionAPI",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CompositionAPI.vue"),
+  },
+  {
+    path: "/compositionapi2",
+    name: "CompositionAPI2",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CompositionAPI2.vue"),
+  },
+  {
+    path: "/compositionapi3",
+    name: "CompositionAPI3",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CompositionAPI3.vue"),
+  },
+  {
+    path: "/compositionapi4",
+    name: "CompositionAPI4",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CompositionAPI4.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -8,7 +8,9 @@
         <br>
         <img :class="image.k" src="./my.png" alt="profileImage" v-show="image.show">
         <div :key="'profile'+i" v-for="(profile, i) in showProfileList">
+
             <h3 :class="profile.k" @mouseover="hoverYes" @mouseleave="hoverNo">{{profile.sub}}{{profile.v}}</h3>
+            <input type="checkbox" v-model="profile.show">
         </div>
         <a :href="github.v" v-show="github.show">
             <h3 :class="github.k" v-show="github.show" >{{github.sub}}</h3>
@@ -21,7 +23,7 @@ export default {
     computed:{
         showProfileList(){
             return this.profileList.filter((p)=>p.show===true)
-        }
+        },
     },
     data(){
         return{
