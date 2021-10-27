@@ -137,6 +137,20 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/CompositionAPI4.vue"),
   },
+  {
+    path: "/compositionapiprovide",
+    name: "CompositionAPIProvider",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/CompositionAPIProvider.vue"
+      ),
+  },
+  {
+    path: "/customdirectives",
+    name: "CustomDirectives",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CustomDirectives.vue"),
+  },
 ];
 
 const router = createRouter({

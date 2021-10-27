@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>name:이름, studentID:학번, major:전공, grade:학년, wanttolearn:배우고 싶은 것, project:만들고 싶은 프로젝트. 검색해보세요! </p>
+        <!-- <p>name:이름, studentID:학번, major:전공, grade:학년, wanttolearn:배우고 싶은 것, project:만들고 싶은 프로젝트. 검색해보세요! </p>
         <input type="text" v-model="keyword"/>
         <button tpye="button" :disabled="keyword==''" @click="search">click</button>
         <button @click="all">전체보기</button>
@@ -14,7 +14,7 @@
         </div>
         <a :href="github.v" v-show="github.show">
             <h3 :class="github.k" v-show="github.show" >{{github.sub}}</h3>
-        </a>
+        </a> -->
     </div>
 </template>
 <script>

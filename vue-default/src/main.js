@@ -10,7 +10,11 @@ app.use(router);
 app.mixin(api);
 app.use(VueSweetalert2);
 app.mount("#app");
-
+app.directive("focus", {
+  mounted(el) {
+    el.focus();
+  },
+});
 // createApp(App)
 //   .use(router)
 //   .mount("#app");
