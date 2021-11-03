@@ -157,6 +157,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Plugins.vue"),
   },
+  {
+    path: "/storeaccess",
+    name: "Store Access",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/StoreAccess.vue"),
+  },
 ];
 
 const router = createRouter({

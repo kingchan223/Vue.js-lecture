@@ -5,7 +5,7 @@ import api from "./api";
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import i18nPlugin from "./plugins/i18n";
-
+import store from "./store";
 const i18nStrings = {
   en: { hi: "Hello", save: "save" },
   ko: { hi: "안녕하세요", save: "저장" },
@@ -18,7 +18,8 @@ app.mixin(api);
 app.use(VueSweetalert2);
 app.mount("#app");
 app.use(i18nPlugin, i18nStrings);
-app.directive("focus", {
+app.use(store);
+app.app.directive("focus", {
   mounted(el) {
     el.focus();
   },
