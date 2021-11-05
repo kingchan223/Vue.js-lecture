@@ -87,81 +87,81 @@ const routes = [
     path: "/profile",
     name: "MyPage",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/MyPage.vue"),
+      import(/* webpackChunkName: "basic" */ "../views/MyPage.vue"),
   },
   {
     path: "/slot",
     name: "SlotUseModalLayout",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/SlotUseModalLayout.vue"),
+      import(/* webpackChunkName: "basic" */ "../views/SlotUseModalLayout.vue"),
   },
   {
     path: "/provideInject",
     name: "ProvideInject",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ProvideInject.vue"),
+      import(/* webpackChunkName: "basic" */ "../views/ProvideInject.vue"),
   },
   {
     path: "/MixinTest",
     name: "MixinTest",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/MixinTest.vue"),
+      import(/* webpackChunkName: "basic" */ "../views/MixinTest.vue"),
   },
   {
     path: "/calculator",
     name: "calculator",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Calculator.vue"),
+      import(/* webpackChunkName: "example" */ "../views/Calculator.vue"),
   },
   {
     path: "/compositionapi",
     name: "CompositionAPI",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/CompositionAPI.vue"),
+      import(/* webpackChunkName: "example" */ "../views/CompositionAPI.vue"),
   },
   {
     path: "/compositionapi2",
     name: "CompositionAPI2",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/CompositionAPI2.vue"),
+      import(/* webpackChunkName: "example" */ "../views/CompositionAPI2.vue"),
   },
   {
     path: "/compositionapi3",
     name: "CompositionAPI3",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/CompositionAPI3.vue"),
+      import(/* webpackChunkName: "example" */ "../views/CompositionAPI3.vue"),
   },
   {
     path: "/compositionapi4",
     name: "CompositionAPI4",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/CompositionAPI4.vue"),
+      import(/* webpackChunkName: "example" */ "../views/CompositionAPI4.vue"),
   },
   {
     path: "/compositionapiprovide",
     name: "CompositionAPIProvider",
     component: () =>
       import(
-        /* webpackChunkName: "about" */ "../views/CompositionAPIProvider.vue"
+        /* webpackChunkName: "example" */ "../views/CompositionAPIProvider.vue"
       ),
   },
   {
     path: "/customdirectives",
     name: "CustomDirectives",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/CustomDirectives.vue"),
+      import(/* webpackChunkName: "example" */ "../views/CustomDirectives.vue"),
   },
   {
     path: "/plugins",
     name: "Plugins",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Plugins.vue"),
+      import(/* webpackChunkName: "example" */ "../views/Plugins.vue"),
   },
   {
     path: "/storeaccess",
     name: "Store Access",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/StoreAccess.vue"),
+      import(/* webpackChunkName: "example" */ "../views/StoreAccess.vue"),
   },
 ];
 
