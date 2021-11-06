@@ -16,14 +16,17 @@ const app = createApp(App);
 app.use(router);
 app.mixin(api);
 app.use(VueSweetalert2);
-app.mount("#app");
 app.use(i18nPlugin, i18nStrings);
 app.use(store);
-app.app.directive("focus", {
+app.directive("focus", {
   mounted(el) {
     el.focus();
   },
 });
+app.mount("#app");
+
+window.Kakao.init("16fc9d45692ac8322f40665c6421f311"); // 발급받은 앱키
+
 // createApp(App)
 //   .use(router)
 //   .mount("#app");

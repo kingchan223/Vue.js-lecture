@@ -163,6 +163,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "example" */ "../views/StoreAccess.vue"),
   },
+  {
+    path: "/kakaologin",
+    name: "kakaologin",
+    component: () =>
+      import(/* webpackChunkName: "example" */ "../views/KakaoLogin.vue"),
+  },
 ];
 
 const router = createRouter({
