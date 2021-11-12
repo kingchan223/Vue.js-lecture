@@ -169,6 +169,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "example" */ "../views/KakaoLogin.vue"),
   },
+  {
+    path: "/naverlogin",
+    name: "naverlogin",
+    component: () =>
+      import(/* webpackChunkName: "example" */ "../views/NaverLogin.vue"),
+  },
 ];
 
 const router = createRouter({
